@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import React, { useState, useEffect } from 'react';
+
+// import all the components we are going to use
+import { SafeAreaView, Text, StyleSheet, View, FlatList,Image,TouchableOpacity} from 'react-native';
+import { SearchBar } from 'react-native-elements';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Minh</Text>
       <StatusBar style="auto" />
     </View>
   );
