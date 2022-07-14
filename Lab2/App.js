@@ -32,10 +32,21 @@ const Search = ({navigation}) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'white',
+    marginTop:30
   },
+  itemStyle: {
+    padding: '10%',
+    height:50,
+    width:50,
+    marginRight:'10%',
+    borderRadius:100,
+
+  },
+  itemView:{
+    marginTop:'5%',
+    flexDirection:'row',
+    //alignContent:'center',
+    alignItems:'center',
+  }
 });
-export default Search
