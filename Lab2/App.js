@@ -29,7 +29,36 @@ const Search = ({navigation}) => {
 
 
 
-
+    const getItem = (item) => {
+      // Function for click on an item
+      alert('Id : ' + item.id + ' name : ' + item.name+' singer: '+item.singer);
+      navigation.navigate('NowPlaying',{
+        playID:[item]
+      })
+    };
+  
+    return (
+      <SafeAreaView style={{ flex: 1 }}>
+        <View style={styles.container}>
+          <SearchBar
+            round
+            searchIcon={{ size: 24 }}
+            onChangeText={(text) => searchFilterFunction(text)}
+            onClear={(text) => searchFilterFunction('')}
+            placeholder="Find by Singer or Name's Song"
+            value={search}
+          />
+          <FlatList
+            data={filteredDataSource}
+            keyExtractor={(item, index) => index.toString()}
+            ItemSeparatorComponent={ItemSeparatorView}
+            renderItem={ItemView}
+          />
+        </View>
+      </SafeAreaView>
+    );
+  };
+  
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
