@@ -39,8 +39,6 @@ const Search = ({navigation}) => {
           const itemData = item.name+'-'+item.singer
             ? input.toUpperCase()
             : ''.toUpperCase();
-     
-            
           const textData = text.toUpperCase();
           return itemData.indexOf(textData) > -1;
         });
@@ -66,8 +64,6 @@ const Search = ({navigation}) => {
           </Text>
         </View>
       </TouchableOpacity>
-        
-        
       );
     };
   
@@ -113,7 +109,6 @@ const Search = ({navigation}) => {
       </SafeAreaView>
     );
   };
-  
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
